@@ -4,6 +4,8 @@ import React from "react";
 import { useEffect } from "react";
 import { motion, useScroll } from "framer-motion"
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 import Top from "@/components/top/top";
 import Profile from "@/components/profile/profile";
 import Timeline from "@/components/timeline/timeline";
