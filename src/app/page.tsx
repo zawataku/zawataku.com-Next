@@ -31,6 +31,7 @@ export default function Home() {
     <div className={styles.body}>
       <div className={shutter.shutter}></div>
       <section className="bg-slate-50">
+      <SpeedInsights />
         <motion.div className={bar.progressbar} style={{ scaleX: scrollYProgress }} />
         <Top></Top>
         <Profile></Profile>
