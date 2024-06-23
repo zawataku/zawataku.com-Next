@@ -7,7 +7,7 @@ type TimelineTextProps = {
     imgURL: string
 }
 
-export default function TimeCard({ date, title, body, imgURL}: TimelineTextProps) {
+export default function TimeCard({ date, title, body, imgURL }: TimelineTextProps) {
     return (
         <div className="relative">
             <div className="mb-3 items-center md:flex md:space-x-4">
