@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Blog_Profile() {
     return (
-        <div className="col-span-1 p-4 mx-3 my-5 bg-white border-2 border-slate-300 rounded-lg">
+        <div className="col-span-1 mx-3 my-5 rounded-lg border-2 border-slate-300 bg-white p-4">
             <img className="mx-auto my-4 size-28 rounded-full ring ring-slate-300" src="/img/profile/profile_picture.webp" alt="Profile picture"></img>
             <h2 className="mt-3 text-center text-3xl font-semibold text-slate-900">ざわたく</h2>
             <div className="mt-8 flex justify-center">

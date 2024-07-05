@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Top() {
     return (
-        <div className="h-screen w-full bg-slate-50 text-slate-900 flex justify-center items-center">
+        <div className="flex h-screen w-full items-center justify-center bg-slate-50 text-slate-900">
             <div className="mx-auto hidden max-w-full md:block lg:block">
                 <div className="py-20">
                     <img className="mx-auto size-64 rounded-full ring ring-slate-300" src="/img/profile/profile_picture.webp" alt="Profile picture"></img>
@@ -30,7 +30,7 @@ export default function Top() {
                 </div>
             </div>
 
-            <div className="max-h-screen mx-auto max-w-sm md:hidden lg:hidden">
+            <div className="mx-auto max-h-screen max-w-sm md:hidden lg:hidden">
                 <div className="pb-14 pt-20">
                     <img className="mx-auto size-52 rounded-full ring ring-slate-300" src="/img/profile/profile_picture.webp" alt="Profile picture"></img>
                     <h1 className="mx-auto my-5 text-center text-4xl">ざわたくの部屋</h1>

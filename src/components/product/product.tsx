@@ -10,7 +10,7 @@ export default function Product() {
             <div className={styles.fade}>
                 <div className="mx-auto max-w-3xl px-6 pb-24 pt-32">
                     <h1 className="pb-3 text-center text-5xl font-semibold text-slate-900">Product</h1>
-                    <p className="mb-10 md:mb-24 lg:mb-24 text-center text-lg text-slate-900">今までに作ったもの</p>
+                    <p className="mb-10 text-center text-lg text-slate-900 md:mb-24 lg:mb-24">今までに作ったもの</p>
                     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                         <ProductCard name="zawataku CSS Framework" description="自作汎用CSSフレームワーク" imgURL="/img/products/zawatakuCSS.webp" linkURL="https://github.com/zawataku/zawataku_framework"></ProductCard>
                         <ProductCard name="学マスロゴジェネレータ" description="学マスのロゴっぽい画像が作れるジェネレータ" imgURL="/img/products/gkms_logo_gen.webp" linkURL="https://gkms-logo-generator.vercel.app"></ProductCard>

@@ -74,8 +74,8 @@ export default function Header() {
                     </button>
                 </div>
             </div>
-            <div className={`fixed left-0 top-0 size-full ${isMenuOpen ? "bg-white/30 backdrop-blur-xl z-30 transition-all duration-300" : "hidden transition-all duration-300"}`}></div>
-            <div className={`mobile-menu fixed z-40 right-0 top-0 h-full w-56 translate-x-full overflow-hidden border-l-4 border-slate-300 bg-slate-50 text-slate-900 md:hidden lg:hidden`}>
+            <div className={`fixed left-0 top-0 size-full ${isMenuOpen ? "z-30 bg-white/30 backdrop-blur-xl transition-all duration-300" : "hidden transition-all duration-300"}`}></div>
+            <div className={`mobile-menu fixed right-0 top-0 z-40 h-full w-56 translate-x-full overflow-hidden border-l-4 border-slate-300 bg-slate-50 text-slate-900 md:hidden lg:hidden`}>
                 <div className="flex size-full flex-col overflow-hidden p-6 pt-32 ">
                     <Link href="/" className="my-5 text-2xl">Home</Link>
                     <Link href="/profile" className="my-5 text-2xl">Profile</Link>

@@ -10,7 +10,7 @@ export default function Timeline() {
             <div className={styles.fade}>
                 <div className="mx-auto w-full max-w-6xl px-6 pb-24 pt-32">
                     <h1 className="pb-3 text-center text-5xl font-semibold text-slate-900">History</h1>
-                    <p className="mb-10 md:mb-24 lg:mb-24 text-center text-lg text-slate-900">これまでの軌跡</p>
+                    <p className="mb-10 text-center text-lg text-slate-900 md:mb-24 lg:mb-24">これまでの軌跡</p>
                     <div className="flex flex-col justify-center divide-y divide-slate-200">
                         <div className="mx-auto w-full max-w-3xl">
                             <div className="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:-translate-x-px before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent md:before:ml-[8.75rem] md:before:translate-x-0">
