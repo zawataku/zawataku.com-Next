@@ -29,11 +29,12 @@ export default async function Post({ params }: PostParams) {
                                 <div className='col-span-2 mb-8 lg:mb-20'>
                                     <div className="mx-1 my-5 rounded-lg border-2 border-slate-300 bg-white px-3 py-4 md:mx-3 md:px-6 lg:mx-3 lg:px-6">
                                         <div className='mb-4'>
-                                            <div className='mb-2 flex max-w-fit items-center rounded-full border-2 border-slate-300 bg-slate-100 px-3 py-1'>
+                                            <div className='mb-2 flex max-w-fit items-center rounded-full border-2 border-slate-300 bg-slate-100 px-3 py-1 text-slate-900'>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path fill="currentColor" d="M20 9c0-.55-.45-1-1-1h-3V5c0-.55-.45-1-1-1s-1 .45-1 1v3h-4V5c0-.55-.45-1-1-1s-1 .45-1 1v3H5c-.55 0-1 .45-1 1s.45 1 1 1h3v4H5c-.55 0-1 .45-1 1s.45 1 1 1h3v3c0 .55.45 1 1 1s1-.45 1-1v-3h4v3c0 .55.45 1 1 1s1-.45 1-1v-3h3c.55 0 1-.45 1-1s-.45-1-1-1h-3v-4h3c.55 0 1-.45 1-1m-6 5h-4v-4h4z" /></svg>{postData.category}
                                             </div>
                                         </div>
-                                        <div className={styles_3.container} dangerouslySetInnerHTML={{ __html: postData.contentHtml ?? '' }}></div>                                        <div className='mt-4 border-t-2 border-slate-300 pt-4'>
+                                        <div className={styles_3.container} dangerouslySetInnerHTML={{ __html: postData.contentHtml ?? '' }}></div>
+                                        <div className='mt-4 border-t-2 border-slate-300 pt-4'>
                                             <div className='mx-5 flex items-center justify-between md:mx-40 lg:mx-40'>
                                                 <div className="tooltip tooltip-bottom size-12" data-tip="Xで共有">
                                                     <a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(postUrl)}&text=${encodeURIComponent(postData.title)}`} target="_blank" rel="noopener noreferrer">
