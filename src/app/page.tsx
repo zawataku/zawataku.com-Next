@@ -1,22 +1,40 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import Header from "@/components/common/header";
-import Right from "@/components/common/right";
-import Left from "@/components/common/left";
-import Footer from "@/components/common/footer";
 import styles from "../styles/styles.module.css"
 
-export default function Home() {
+import Top from "@/components/top/top";
+import Frame from "@/components/common/frame";
+import Sidebar from "@/components/common/sidebar";
+import Loading from '@/components/common/loading';
+
+const Home: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const handleComplete = () => setIsLoading(false);
+
+    if (document.readyState === 'complete') {
+      handleComplete();
+    } else {
+      window.addEventListener('load', handleComplete);
+      return () => window.removeEventListener('load', handleComplete);
+    }
+  }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
   return (
     <div className={styles.body}>
       <SpeedInsights />
-      <div className="min-h-screen bg-primary-content">
-        <Header></Header>
-        <Right></Right>
-        <Left></Left>
-        <Footer></Footer>
-      </div>
+      <main className="min-h-screen bg-primary">
+        <Frame></Frame>
+        <Sidebar></Sidebar>
+        <Top></Top>
+      </main>
     </div>
   );
 }
+
+export default Home;

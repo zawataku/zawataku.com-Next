@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
+import { Zen_Maru_Gothic } from 'next/font/google';
+
+const zenMaruGothic = Zen_Maru_Gothic({
+  display: 'swap',
+  weight: ['400', '700'],
+  preload: false,
+});
 
 export const metadata: Metadata = {
   title: "ざわたくの部屋",
@@ -14,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body className={zenMaruGothic.className}>{children}</body>
       <GoogleAnalytics gaId={process.env.GA_ID ?? ""} />
     </html>
   );

@@ -11,10 +11,10 @@ const config: Config = {
       colors: {
         "primary": "#F7E8EA",
         "primary-content": "#FDF8F9",
-        "accent": "#CC6774",
+        "secondary": "#FFB6C0",
+        "accent": "#D0727E",
         "text": "#8B2021",
         "pastel-blue": "#73DADC",
-        "pastel-pink": "#E78071",
         "pastel-green": "#AEDC5C"
       }
     },

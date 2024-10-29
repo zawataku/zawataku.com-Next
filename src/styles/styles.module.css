@@ -1,14 +1,4 @@
-@font-face {
-    font-style: normal;
-    font-family: 'GENJYUUGOTHIC';
-    src: url(/font/GENJYUUGOTHICX-BOLD-subset.woff2) format("woff2");
-}
-
 .body {
-    font-family: 'GENJYUUGOTHIC';
-    font-weight: inherit;
-    /*フォントの乱れを修正*/
-
     animation-name: fade-in;
     animation-duration: 1s;
 }
