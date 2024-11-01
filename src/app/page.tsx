@@ -1,15 +1,17 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import styles from "../styles/styles.module.css";
 
 import Top from "@/components/top/top";
 import Frame from "@/components/common/frame";
 import Loading from '@/components/common/loading';
 
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, styled } from 'styled-components';
+import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
+  ${reset}
+  
   :root {
     --primary: #F7E8EA;
     --primary-content: #FDF8F9;
@@ -17,6 +19,23 @@ const GlobalStyle = createGlobalStyle`
     --accent: #D0727E;
     --text: #8B2021;
   }
+
+  body {
+    background-color: var(--primary-content);
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+`;
+
+const MainContainer = styled.main`
+  animation: fade-in 1s ease-in-out;
 `;
 
 const Home: React.FC = () => {
@@ -40,13 +59,11 @@ const Home: React.FC = () => {
   return (
     <>
       <GlobalStyle />
-      <div className={styles.body}>
-        <SpeedInsights />
-        <main>
-          <Frame />
-          <Top />
-        </main>
-      </div>
+      <SpeedInsights />
+      <MainContainer>
+        <Frame />
+        <Top />
+      </MainContainer>
     </>
   );
 }
