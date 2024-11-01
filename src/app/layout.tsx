@@ -9,7 +9,7 @@ const zenMaruGothic = Zen_Maru_Gothic({
 });
 
 export const metadata: Metadata = {
-  title: "ざわたくの部屋",
+  title: "ざわたく.com",
   description: "ざわたくのポートフォリオ",
 };
 

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { CgTwitter } from "react-icons/cg";
 import { FaGithub } from 'react-icons/fa';
 import { SiQiita } from "react-icons/si";
@@ -17,7 +18,7 @@ const Body_Top = styled.div`
 `;
 
 const Top_Section = styled.section`
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     text-align: center;
     align-items: center;
     display: flex;
@@ -55,7 +56,7 @@ const SocialIcon = styled.a`
 `;
 
 const Main_Section = styled.section`
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     display: flex;
     flex-direction: column;
 `;
@@ -64,14 +65,14 @@ const SubTitle = styled.h2`
     font-weight: 700;
     font-size: 1.75rem;
     line-height: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     color: var(--text);
 `;
 
 const Sentence = styled.p`
     font-weight: 500;
     font-size: 1.25rem;
-    line-height: 2.5rem;
+    line-height: 2rem;
     color: var(--text);
 `;
 
@@ -97,7 +98,18 @@ export default function Top() {
 
                 <Main_Section>
                     <SubTitle>自己紹介</SubTitle>
-                    <Sentence>石川県の大学生です</Sentence>
+                    <Sentence>ざわたくです。石川県の大学生です。</Sentence>
+                    <Sentence>さけるチーズとサラダチキンが大好きです。</Sentence>
+                </Main_Section>
+
+                <Main_Section>
+                    <SubTitle>好きなもの</SubTitle>
+                    <Sentence>さけるチーズ / サラダチキン / 古めの軽自動車</Sentence>
+                </Main_Section>
+
+                <Main_Section>
+                    <SubTitle>趣味</SubTitle>
+                    <Sentence>お絵描き / お出かけ / フィルムカメラ</Sentence>
                 </Main_Section>
             </Body_Top>
         </>
