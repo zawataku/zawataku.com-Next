@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import "./globals.css";
 import { Zen_Maru_Gothic } from 'next/font/google';
 
 const zenMaruGothic = Zen_Maru_Gothic({
@@ -11,7 +10,7 @@ const zenMaruGothic = Zen_Maru_Gothic({
 
 export const metadata: Metadata = {
   title: "ざわたくの部屋",
-  description: "ざわたくのポートフォリオサイトです",
+  description: "ざわたくのポートフォリオ",
 };
 
 export default function RootLayout({
