@@ -9,8 +9,8 @@ const Body_Top = styled.div`
     margin-right: auto;
     margin-top: 4rem;
     margin-bottom: 4rem;
-    padding: 2rem;
-    border-radius: 0.5rem;
+    padding: 3rem;
+    border-radius: 0.75rem;
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
     background-color: white;
     min-height: 100vh;
@@ -69,7 +69,7 @@ const SubTitle = styled.h2`
 `;
 
 const Sentence = styled.p`
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.25rem;
     line-height: 2.5rem;
     color: var(--text);
@@ -94,7 +94,7 @@ export default function Top() {
                         </SocialIcon>
                     </Social_Area>
                 </Top_Section>
-                
+
                 <Main_Section>
                     <SubTitle>自己紹介</SubTitle>
                     <Sentence>石川県の大学生です</Sentence>

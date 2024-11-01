@@ -4,7 +4,7 @@ import { Zen_Maru_Gothic } from 'next/font/google';
 
 const zenMaruGothic = Zen_Maru_Gothic({
   display: 'swap',
-  weight: ['400', '700', '900'],
+  weight: ['500', '700'],
   preload: false,
 });
 
