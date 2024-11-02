@@ -109,7 +109,7 @@ export default function Top() {
 
                 <Main_Section>
                     <SubTitle>趣味</SubTitle>
-                    <Sentence>お絵描き / お出かけ / フィルムカメラ</Sentence>
+                    <Sentence>お絵描き / フィルムカメラ</Sentence>
                 </Main_Section>
             </Body_Top>
         </>

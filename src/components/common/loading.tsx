@@ -32,13 +32,13 @@ const CenterDot = styled(LoadingDot)`
 `;
 
 const Loading: React.FC = () => {
-    return (
-        <LoadingContainer>
-            <LoadingDot />
-            <CenterDot />
-            <LoadingDot />
-        </LoadingContainer>
-    );
+  return (
+    <LoadingContainer>
+      <LoadingDot />
+      <CenterDot />
+      <LoadingDot />
+    </LoadingContainer>
+  );
 };
 
 export default Loading;
