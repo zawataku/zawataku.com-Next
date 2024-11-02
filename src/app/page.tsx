@@ -13,9 +13,9 @@ const GlobalStyle = createGlobalStyle`
   ${reset}
   
   :root {
-    --primary: #F7E8EA;
+    --primary: #fef2f2;
     --primary-content: #FDF8F9;
-    --secondary: #FFB6C0;
+    --secondary: #fca5a5;
     --accent: #D0727E;
     --text: #8B2021;
   }
