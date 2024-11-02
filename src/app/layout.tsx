@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { Zen_Maru_Gothic } from 'next/font/google';
 
 const zenMaruGothic = Zen_Maru_Gothic({
@@ -21,7 +20,6 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={zenMaruGothic.className}>{children}</body>
-      <GoogleAnalytics gaId={process.env.GA_ID ?? ""} />
     </html>
   );
 }
