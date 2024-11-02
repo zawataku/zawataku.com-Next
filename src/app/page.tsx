@@ -53,7 +53,15 @@ const Home: React.FC = () => {
   }, []);
 
   if (isLoading) {
-    return <Loading />;
+    return (
+      <>
+        <GlobalStyle />
+        <SpeedInsights />
+        <MainContainer>
+          <Loading />
+        </MainContainer>
+      </>
+    );
   }
 
   return (
