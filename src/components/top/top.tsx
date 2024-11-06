@@ -5,20 +5,18 @@ import { FaGithub } from 'react-icons/fa';
 import { SiQiita } from "react-icons/si";
 
 const Body_Top = styled.div`
-    max-width: 56rem;
+    max-width: 42rem;
     margin-left: auto;
     margin-right: auto;
     margin-top: 4rem;
     margin-bottom: 4rem;
     padding: 3rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
     background-color: white;
     min-height: 100vh;
 `;
 
 const Top_Section = styled.section`
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
     text-align: center;
     align-items: center;
     display: flex;
@@ -67,6 +65,11 @@ const SubTitle = styled.h2`
     line-height: 2.5rem;
     margin-bottom: 0.75rem;
     color: var(--text);
+    border-left: 8px;
+    border-style: solid;
+    border-color: var(--accent);
+    padding-left: 0.5rem;
+
 `;
 
 const Sentence = styled.p`
@@ -74,6 +77,11 @@ const Sentence = styled.p`
     font-size: 1.25rem;
     line-height: 2rem;
     color: var(--text);
+    white-space: pre-line;
+    border-left: 8px;
+    border-style: solid;
+    border-color: transparent;
+    padding-left: 0.5rem;
 `;
 
 export default function Top() {
@@ -110,6 +118,11 @@ export default function Top() {
                 <Main_Section>
                     <SubTitle>趣味</SubTitle>
                     <Sentence>お絵描き / フィルムカメラ</Sentence>
+                </Main_Section>
+
+                <Main_Section>
+                    <SubTitle>ちょっとわかる</SubTitle>
+                    <Sentence>React / Next.js / Python</Sentence>
                 </Main_Section>
             </Body_Top>
         </>

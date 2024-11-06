@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: var(--primary);
+    background-color: white;
   }
 
   @keyframes fade-in {
