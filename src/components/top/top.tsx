@@ -1,60 +1,140 @@
-import React from "react";
-import Link from "next/link";
+import styled from 'styled-components';
+
+import { CgTwitter } from "react-icons/cg";
+import { FaGithub } from 'react-icons/fa';
+import { SiQiita } from "react-icons/si";
+
+const Body_Top = styled.div`
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding: 3rem;
+    background-color: white;
+    min-height: 100vh;
+`;
+
+const Top_Section = styled.section`
+    margin-bottom: 3rem;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.75rem;
+`;
+
+const Title = styled.h1`
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 2.5rem;
+    color: var(--text);
+    @media screen and (max-width: 425px){
+        font-size: 2.25rem;
+    }
+`;
+
+const Profile_img = styled.img`
+    border: 4px solid var(--text);
+    width: 6rem;
+    height: 6rem;
+    border-radius: 9999px;
+`;
+
+const Social_Area = styled.div`
+    display: flex;
+    gap: 2rem;
+`;
+
+const SocialIcon = styled.a`
+    color: var(--text);
+    font-size: 2.5rem;
+    transition: color 0.3s;
+
+    &:hover {
+        color: var(--accent);
+    }
+`;
+
+const Main_Section = styled.section`
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+`;
+
+const SubTitle = styled.h2`
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+    border-left: 8px;
+    border-style: solid;
+    border-color: var(--accent);
+    padding-left: 0.5rem;
+    @media screen and (max-width: 425px){
+        font-size: 1.25rem;
+        line-height: 2rem;
+    }
+`;
+
+const Sentence = styled.p`
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: var(--text);
+    white-space: pre-line;
+    border-left: 8px;
+    border-style: solid;
+    border-color: transparent;
+    padding-left: 0.5rem;
+    @media screen and (max-width: 425px){
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+`;
 
 export default function Top() {
     return (
-        <div className="flex h-screen w-full items-center justify-center bg-slate-50 text-slate-900">
-            <div className="mx-auto hidden max-w-full md:block lg:block">
-                <div className="py-20">
-                    <img className="mx-auto size-64 rounded-full ring ring-slate-300" src="/img/profile/profile_picture.webp" alt="Profile picture"></img>
-                    <h1 className="mx-auto my-5 text-center text-5xl">ざわたくの部屋</h1>
-                </div>
+        <>
+            <Body_Top>
+                <Top_Section>
+                    <Title>ざわたく.com</Title>
+                    <Profile_img src="/img/profile_icon.webp" alt="zawataku" />
+                    <Social_Area>
+                        <SocialIcon href="https://twitter.com/zawataku0819" target="_blank" aria-label="Twitter">
+                            <CgTwitter />
+                        </SocialIcon>
+                        <SocialIcon href="https://github.com/zawataku" target="_blank" aria-label="GitHub">
+                            <FaGithub />
+                        </SocialIcon>
+                        <SocialIcon href="https://qiita.com/zawataku0819" target="_blank" aria-label="GitHub">
+                            <SiQiita />
+                        </SocialIcon>
+                    </Social_Area>
+                </Top_Section>
 
-                <div className="flex justify-center bg-slate-50 px-32 py-6 text-slate-900">
-                    <Link href="/profile" className="mx-10 duration-300 ease-in-out hover:text-sky-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto" width="48" height="48" viewBox="0 0 16 16"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="6" r="3.25" /><path d="M2.75 14.25c0-2.5 2-5 5.25-5s5.25 2.5 5.25 5" /></g></svg>
-                        <p className="text-2xl">Profile</p>
-                    </Link>
-                    <Link href="/history" className="mx-10 duration-300 ease-in-out hover:text-sky-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto" width="48" height="48" viewBox="0 0 16 16"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M5.75 1.75h4.5v3.5h-4.5z" /><path d="M5.25 2.75h-2.5v11.5h10.5V2.75h-2.5" /></g></svg>
-                        <p className="text-2xl">History</p>
-                    </Link>
-                    <Link href="/product" className="mx-10 duration-300 ease-in-out hover:text-sky-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto" width="48" height="48" viewBox="0 0 16 16"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M2.75 7.75v-6h5.5l5 5v7.5M1.75 10.8h3v3.5h-3z" /><path d="M7.25 14.2h3m-3-3.5h1.5v3m-1-11.45v5h5.05" /></g></svg>
-                        <p className="text-2xl">Product</p>
-                    </Link>
-                    <Link href="/blog" className="mx-10 duration-300 ease-in-out hover:text-sky-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto" width="48" height="48" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.25 11.25L1.75 8l3.5-3.25m5.5 6.5L14.25 8l-3.5-3.25" /></svg>
-                        <p className="text-2xl">Blog</p>
-                    </Link>
-                </div>
-            </div>
+                <Main_Section>
+                    <SubTitle>自己紹介</SubTitle>
+                    <Sentence>ざわたくです。石川県の大学生です。</Sentence>
+                    <Sentence>さけるチーズとサラダチキンが好きです。</Sentence>
+                </Main_Section>
 
-            <div className="mx-auto max-h-screen max-w-sm md:hidden lg:hidden">
-                <div className="pb-14 pt-20">
-                    <img className="mx-auto size-52 rounded-full ring ring-slate-300" src="/img/profile/profile_picture.webp" alt="Profile picture"></img>
-                    <h1 className="mx-auto my-5 text-center text-4xl">ざわたくの部屋</h1>
-                </div>
+                <Main_Section>
+                    <SubTitle>好きなもの</SubTitle>
+                    <Sentence>さけるチーズ / サラダチキン / 古めの軽自動車</Sentence>
+                </Main_Section>
 
-                <div className="grid w-full grid-cols-2 justify-center gap-x-4 gap-y-12 bg-slate-50 px-1 py-6 text-slate-900">
-                    <Link href="/profile" className="mx-auto duration-300 ease-in-out hover:text-sky-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto" width="40" height="40" viewBox="0 0 16 16"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="6" r="3.25" /><path d="M2.75 14.25c0-2.5 2-5 5.25-5s5.25 2.5 5.25 5" /></g></svg>
-                        <p className="text-2xl">Profile</p>
-                    </Link>
-                    <Link href="/history" className="mx-auto duration-300 ease-in-out hover:text-sky-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto" width="40" height="40" viewBox="0 0 16 16"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M5.75 1.75h4.5v3.5h-4.5z" /><path d="M5.25 2.75h-2.5v11.5h10.5V2.75h-2.5" /></g></svg>
-                        <p className="text-2xl">History</p>
-                    </Link>
-                    <Link href="/product" className="mx-auto duration-300 ease-in-out hover:text-sky-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto" width="40" height="40" viewBox="0 0 16 16"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M2.75 7.75v-6h5.5l5 5v7.5M1.75 10.8h3v3.5h-3z" /><path d="M7.25 14.2h3m-3-3.5h1.5v3m-1-11.45v5h5.05" /></g></svg>
-                        <p className="text-2xl">Product</p>
-                    </Link>
-                    <Link href="/blog" className="mx-auto duration-300 ease-in-out hover:text-sky-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto" width="40" height="40" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.25 11.25L1.75 8l3.5-3.25m5.5 6.5L14.25 8l-3.5-3.25" /></svg>
-                        <p className="text-2xl">Blog</p>
-                    </Link>
-                </div>
-            </div>
-        </div>
+                <Main_Section>
+                    <SubTitle>趣味</SubTitle>
+                    <Sentence>お絵描き / フィルムカメラ</Sentence>
+                </Main_Section>
+
+                <Main_Section>
+                    <SubTitle>ちょっとわかる</SubTitle>
+                    <Sentence>React / Next.js / Python</Sentence>
+                </Main_Section>
+            </Body_Top>
+        </>
     );
 }
