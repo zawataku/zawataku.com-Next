@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react"
 
 import Top from "@/components/top/top";
 import Frame from "@/components/common/frame";
@@ -57,6 +58,7 @@ const Home: React.FC = () => {
       <>
         <GlobalStyle />
         <SpeedInsights />
+        <Analytics />
         <MainContainer>
           <Loading />
         </MainContainer>
@@ -68,6 +70,7 @@ const Home: React.FC = () => {
     <>
       <GlobalStyle />
       <SpeedInsights />
+      <Analytics />
       <MainContainer>
         <Frame />
         <Top />
