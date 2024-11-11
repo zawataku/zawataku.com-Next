@@ -29,6 +29,9 @@ const Title = styled.h1`
     font-size: 3rem;
     line-height: 2.5rem;
     color: var(--text);
+    @media screen and (max-width: 425px){
+        font-size: 2.25rem;
+    }
 `;
 
 const Profile_img = styled.img`
@@ -69,7 +72,10 @@ const SubTitle = styled.h2`
     border-style: solid;
     border-color: var(--accent);
     padding-left: 0.5rem;
-
+    @media screen and (max-width: 425px){
+        font-size: 1.25rem;
+        line-height: 2rem;
+    }
 `;
 
 const Sentence = styled.p`
@@ -82,6 +88,10 @@ const Sentence = styled.p`
     border-style: solid;
     border-color: transparent;
     padding-left: 0.5rem;
+    @media screen and (max-width: 425px){
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
 `;
 
 export default function Top() {
@@ -107,7 +117,7 @@ export default function Top() {
                 <Main_Section>
                     <SubTitle>自己紹介</SubTitle>
                     <Sentence>ざわたくです。石川県の大学生です。</Sentence>
-                    <Sentence>さけるチーズとサラダチキンが大好きです。</Sentence>
+                    <Sentence>さけるチーズとサラダチキンが好きです。</Sentence>
                 </Main_Section>
 
                 <Main_Section>
