@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Astro (rearchitecture)
+dist-astro
+.astro
+.wrangler
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
